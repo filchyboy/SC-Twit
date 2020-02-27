@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # web-app-inclass-11
 
 Setup from scratch:
@@ -42,3 +43,7 @@ Run the app:
 ```sh
 FLASK_APP=web_app flask run
 ```
+=======
+# SC-Twit
+Search for and analyze tweets related to specific topics.
+>>>>>>> 12f8862578071369b130108b5d369be9037eb332
