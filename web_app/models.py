@@ -6,11 +6,6 @@ db = SQLAlchemy()
 
 migrate = Migrate()
 
-class Book(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(128))
-    author_id = db.Column(db.String(128))
-
 class User(db.Model):
     id = db.Column(db.BigInteger, primary_key=True)
     screen_name = db.Column(db.String(128), nullable=False)
