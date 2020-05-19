@@ -2,11 +2,20 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h2>Welcome Home</h2>
-
-    <p>First add users, then use the form below to predict which user is more likely to say a given tweet</p>
 
     <form action="/predict" method="POST">
+
+    {% if users %}
+    <select name="screen_name_a">
+        {% for user in users %}
+    <option value="{{ user }}">{{ user }}</option>
+        {% endfor %}
+    </select>
+        </ul>
+
+    {% else %}
+        <p>No users found.</p>
+    {% endif %}
 
         <label>Twitter User A:</label>
         <select name="screen_name_a">

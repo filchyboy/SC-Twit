@@ -20,24 +20,4 @@ def twitter_api():
     return api
 
 if __name__ == "__main__":
-
-    api = twitter_api()
-    user = api.get_user("Chrisalbon")
-    print("USER", user)
-    print(user.screen_name)
-    print(user.name)
-    print(user.followers_count)
-
-    #breakpoint()
-
-
-
-
-
-    #public_tweets = api.home_timeline()
-    #
-    #for tweet in public_tweets:
-    #    print(type(tweet)) #> <class 'tweepy.models.Status'>
-    #    #print(dir(tweet))
-    #    print(tweet.text)
-    #    print("-------------")
+    pass

@@ -33,7 +33,7 @@ def get_user(screen_name=None):
 
         #breakpoint()
 
-        statuses = twitter_api_client.user_timeline(screen_name, tweet_mode="extended", count=50, exclude_replies=True, include_rts=False)
+        statuses = twitter_api_client.user_timeline(screen_name, tweet_mode="extended", count=150, exclude_replies=True, include_rts=False)
         for status in statuses:
             print(status.full_text)
             print("----")

@@ -9,18 +9,7 @@ from web_app.basilica_service import connection as basilica_api_client
 
 stats_routes = Blueprint("stats_routes", __name__)
 
-@stats_routes.route("/iris")
-def iris():
-    X, y = load_iris(return_X_y=True)
-    classifier = LogisticRegression(
-        random_state=0,
-        solver="lbfgs",
-        multi_class="multinomial"
-    ).fit(X, y)
-
-    result = classifier.predict(X[:2, :])
-    return str(result)
-
+#breakpoint()
 @stats_routes.route("/predict", methods=["POST"])
 def predict():
     print("PREDICT ROUTE...")
@@ -59,7 +48,7 @@ def predict():
 
     example_embedding = basilica_api_client.embed_sentence(tweet_text)
     result = classifier.predict([example_embedding])
-    #breakpoint()
+  
 
     #return jsonify({"message": "RESULTS", "most_likely": result[0]})
     return render_template("results.html",
